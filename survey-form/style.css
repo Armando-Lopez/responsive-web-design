@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: rgba(117, 78, 6, 0.205);
+}
+
+header {
+    text-align: center;
+    margin: 20px auto 30px auto;
+    width: 80%;
+    border-radius: 30px;
+    color: black;
+}
+
+header #title {
+    margin: 5px;
+}
+
+#survey-form {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    border-radius: 10px;
+    background-color: rgba(107, 70, 2, 0.603);
+}
+
+#survey-form div {
+    margin: 20px 0;
+    /* border: 1px solid black; */
+}
+
+#survey-form div label {
+    font-size: 1.5em;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#dropdown {
+    width: auto;
+    height: 40px;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+#generos p {
+    font-size: 1.6em;
+    margin-bottom: 5px;
+}
+
+#generos label {
+    display: block;
+}
+
+#generos input[type=radio] {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+#gustos p {
+    font-size: 1.6em;
+}
+
+#gustos label {
+    display: block;
+}
+
+#gustos input {
+    width: 20px;
+    height: 20px;
+}
+
+#survey-form textarea {
+    width: 100%;
+    height: 200px;
+    padding: 1em;
+    font-size: 1.5em;
+    resize: vertical;
+    border-radius: 5px;
+}
+
+#survey-form input[type=submit] {
+    width: 100%;
+    font-size: 1.3em;
+    background-color: cornsilk;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.borde {
+    border: 1px solid black;
+}

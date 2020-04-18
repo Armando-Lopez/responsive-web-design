@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey form - Diego López</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="form.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Formulario de presentación</h1>
+        <p id="description">Queremos cononcerte. Por favor llena el siguiente formualrio</p>
+    </header>
+    <main>
+        <form id="survey-form" class="borde">
+
+            <div>
+                <label for="name" id="name-label">Nombre</label>
+                <input type="text" id="name" name="name" required placeholder="Por favor ingrese un nombre">
+            </div>
+
+            <div>
+                <label for="email" id="email-label">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Por favor ingrese un email">
+            </div>
+
+            <div>
+                <label for="number" id="number-label">Edad</label>
+                <input type="number" id="number" name="number" min="10" max="100"
+                    placeholder="Por favor ingrese su edad">
+            </div>
+
+            <div>
+                <label for="dropdown">Departamento
+                    <select id="dropdown" required>
+                        <option value="">Selecciona tu Departamento</option>
+                        <option value="Amazonas">Amazonas</option>
+                        <option value="Antioquia">Antioquia</option>
+                        <option value="Arauca">Arauca</option>
+                        <option value="Atlántico">Atlántico</option>
+                        <option value="Bolívar">Bolívar</option>
+                        <option value="Boyacá">Boyacá</option>
+                        <option value="Caldas">Caldas</option>
+                        <option value="Caquetá">Caquetá</option>
+                        <option value="Casanare">Casanare</option>
+                        <option value="Cauca">Cauca</option>
+                        <option value="Cesar">Cesar</option>
+                        <option value="Chocó">Chocó</option>
+                        <option value="Córdoba">Córdoba</option>
+                        <option value="Cundinamarca">Cundinamarca</option>
+                        <option value="Guainía">Guainía</option>
+                        <option value="Guaviare">Guaviare</option>
+                        <option value="Huila">Huila</option>
+                        <option value="La Guajira">La Guajira</option>
+                        <option value="Magdalena">Magdalena</option>
+                        <option value="Meta">Meta</option>
+                        <option value="Nariño">Nariño</option>
+                        <option value="Norte de Santander">Norte de Santander</option>
+                        <option value="Putumayo">Putumayo</option>
+                        <option value="Quindío">Quindío</option>
+                        <option value="Risaralda">Risaralda</option>
+                        <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                        <option value="Santander">Santander</option>
+                        <option value="Sucre">Sucre</option>
+                        <option value="Tolima">Tolima</option>
+                        <option value="Valle del Cauca">Valle del Cauca</option>
+                        <option value="Vaupés">Vaupés</option>
+                        <option value="Vichada">Vichada</option>
+                    </select>
+                </label>
+            </div>
+
+            <div id="generos">
+                <p>Selecciona tu genero</p>
+                <label for="masculino">Masculino
+                    <input type="radio" name="genero" id="maculino" value="maculino">
+                </label>
+
+                <label for="femenino">Femenino
+                    <input type="radio" name="genero" id="masculino" value="femenino">
+                </label>
+
+                <label for="femenino">Otro
+                    <input type="radio" name="genero" id="masculino" value="CIS">
+                </label>
+            </div>
+
+            <div id="gustos">
+                <p>¿Que gustos tienes?</p>
+                <label>
+                    <input type="checkbox" name="gustos" value="saltar">
+                    Leer
+                </label>
+                <label>
+                    <input type="checkbox" name="gustos" value="comer">
+                    Comer
+                </label>
+                <label>
+                    <input type="checkbox" name="gustos" value="dormir">
+                    Dormir
+                </label>
+                <label>
+                    <input type="checkbox" name="gustos" value="deporte">
+                    Hacer deporte
+                </label>
+                <label>
+                    <input type="checkbox" name="gustos" value="cantar">
+                    Cantar
+                </label>
+                <label>
+                    <input type="checkbox" name="gustos" value="dibujar">
+                    Dibujar
+                </label>
+                <label>
+                    <input type="checkbox" name="gustos" value="escribir">
+                    Escribir
+                </label>
+            </div>
+
+            <div>
+                <textarea name="texto" id="texto" cols="30" rows="10" placeholder="Algo más sobre mi..."></textarea>
+            </div>
+
+            <div>
+                <input type="submit" value="Conoceme!">
+            </div>
+
+        </form>
+    </main>
+</body>
+
+</html>
