@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+
+  box-shadow: 0 3px 5px silver;
+  background-color: white;
+}
+
+#header-img {
+  height: 70px;
+  border-radius: 5px;
+}
+
+#nav-bar {
+  width: 95%;
+  margin-top: 3px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav-bar .nav-link {
+  padding: 2px;
+  margin: 0 2px;
+
+  text-decoration: none;
+  color: black;
+
+  font-size: 1em;
+  font-weight: 900;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  /* background-color: crimson; */
+}
+
+main {
+  padding: 0 3px;
+  font-size: 1.1em;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+#intro {
+  text-align: justify;
+}
+
+#comoSeHace {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#video {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  align-self: center;
+}
+
+#galeria p {
+  text-align: center;
+}
+
+#galeria div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+#galeria img {
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 3px;
+  border-radius: 3px;
+}
+
+#proximo {
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+#form {
+  padding: 10px 0;
+  text-align: center;
+}
+
+#form input {
+  font-size: medium;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+footer {
+  width: 70%;
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    padding: 10px;
+    font-size: 1.2em;
+  }
+
+  #header {
+    flex-direction: row;
+  }
+
+  #nav-bar {
+    width: auto;
+  }
+
+  main {
+    max-width: 900px;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  #quieroUno {
+    margin-top: 70px;
+  }
+
+  hr {
+    margin: 6px;
+  }
+
+  #galeria div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #galeria div img {
+    margin: 5px;
+  }
+  #form input {
+    padding: 10px;
+    cursor: pointer;
+  }
+}
