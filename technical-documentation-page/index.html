@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical documentation page</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="sass/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="content">
+            <header>
+                <h1>Sass Documentation</h1>
+            </header>
+            <ul>
+                <li><a href="#intro" class="nav-link">Introducción</a></li>
+                <li><a href="#instalation" class="nav-link">Instalación</a></li>
+                <li><a href="#variables" class="nav-link">Sass Variables</a></li>
+                <li><a href="#sass_reglas_anidadas" class="nav-link">Reglas anidadas Sass</a></li>
+                <li><a href="#extend_y_herencia" class="nav-link">Sass @extend y herencia</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="intro">
+            <header>
+                <h1>¿Qué es Sass?</h1>
+            </header>
+            <div class="content">
+                <p>Sass significa <strong>Syntactically Awesome Stylesheet.</strong> Es un preprocesador CSS. Sass
+                    reduce la
+                    repetición de CSS y, por lo tanto, ahorra tiempo.
+                </p>
+                <p>Sass es totalmente compatible con todas las versiones de CSS. Se toma esta compatibilidad en serio,
+                    paraque pueda utilizar sin problemas cualquier biblioteca CSS disponible.
+                </p>
+                <ul>
+                    <li>Sass es una extensión de CSS</li>
+                    <li>Sass fue diseñado por Hampton Catlin y desarrollado por Natalie Weizenbaum en 2006</li>
+                    <li>Sass se puede descargar y usar de forma gratuita</li>
+                </ul>
+                <h3>¿Por qué usar Sass</h3>
+                <p>
+                    Las hojas de estilo son cada vez más grandes, más complejas y más difíciles de mantener. Aquí es
+                    donde
+                    un
+                    preprocesador CSS puede ayudar.
+                    <br>
+                    Sass le permite usar características que no existen en CSS, como variables, reglas anidadas, mixins,
+                    importaciones, herencia, funciones integradas y otras cosas.
+                </p>
+                <h3>¿Cómo funciona Sass?</h3>
+                <p>
+                    Un navegador no entiende el código Sass. Por lo tanto, necesitará un preprocesador Sass para
+                    convertir
+                    el código Sass en CSS estándar.
+
+                    Este proceso se denomina transpiling. Por lo tanto, usted necesita dar a un transpiler (algún tipo
+                    de
+                    programa) un poco de código Sass y luego obtener un poco de código CSS de nuevo.
+                </p>
+                <h3> Tipo de archivo Sass</h3>
+                <p>
+                    Sass archivos tiene la extensión de archivo ".scss".
+                </p>
+                <h3>Antes de continuar, debes tener una compresión de:</h3>
+                <p>
+                    <ul>
+                        <li>Html</li>
+                        <li>Css</li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+        <section class="main-section" id="instalation">
+            <header>
+                <h1>Instalación</h1>
+            </header>
+            <div class="content">
+                <h3>Requisitos</h3>
+                <ul>
+                    <li><b>Sistema operativo</b> - Sass es independiente de la plataforma
+                    </li>
+                    <li><b>Soporte para navegadores</b> - Sass funciona en Edge/IE (desde IE 8), Firefox, Chrome,
+                        Safari,
+                        Opera
+                    </li>
+                    <li><b>Lenguaje de programación</b> - Sass se basa en Ruby
+                    </li>
+                </ul>
+                <h3>Sitio Web Oficial de Sass</h3>
+                <p>
+                    Leer más sobre Sass en el sitio web oficial de Sass: <a
+                        href="https://sass-lang.com/">https://sass-lang.com/</a>
+                </p>
+                <h3>Instalar Sass</h3>
+                <p>
+                    Hay varias maneras de instalar Sass en su sistema. Hay muchas aplicaciones que te pondrán en marcha
+                    con Sass en pocos minutos para Mac, Windows y Linux. Algunas de estas son gratuitas, pero algunas
+                    son aplicaciones de pago.
+
+                    Puedes leer más sobre ellos aquí: <a href="sass-lang.com/install">sass-lang.com/install</a>
+                </p>
+            </div>
+        </section>
+        <section class="main-section" id="variables">
+            <header>
+                <h1>Sass Variables</h1>
+            </header>
+            <div class="content">
+                <p>
+                    Las variables son una forma de almacenar información que puede reutilizar más adelante.
+                    Con Sass, puede almacenar información en variables, como:
+                </p>
+                <ul>
+                    <li>Cadenas de texto (String)</li>
+                    <li>Números</li>
+                    <li>Colores</li>
+                    <li>Booleanos</li>
+                    <li>Listas</li>
+                    <li>Valores nulos</li>
+                </ul>
+                <p>En Sass se usa el símbolo $, segudo de un nombre, para declarar variables...</p>
+                <code>
+                    $nombreVariable : valor;
+                </code>
+                <p>En el ejemplo siguiente se declaran 4 variables denominadas myFont, myColor, myFontSize y myWidth.
+                    Después de declarar las variables, puede utilizar las variables donde quiera:
+                </p>
+                <pre>
+                    <code>
+                        $myFont: Helvetica, sans-serif;
+                        $myColor: red;
+                        $myFontSize: 18px;
+                        $myWidth: 680px;
+                        
+                        body {
+                            font-family: $myFont;
+                            font-size: $myFontSize;
+                            color: $myColor;
+                        }
+                        
+                        #container {
+                            width: $myWidth;
+                        }
+                    </code>
+                </pre>
+                <p>
+                    Por lo tanto, cuando el archivo Sass se transpiliza, toma las variables (myFont, myColor, etc.) y
+                    genera
+                    CSS normal con los valores de variable colocados en el CSS, así:
+                </p>
+                <pre>
+                    <code>
+                        body {
+                            font-family: Helvetica, sans-serif;
+                            font-size: 18px;
+                            color: red;
+                            }
+                            
+                            #container {
+                            width: 680px;
+                        }
+                    </code>
+                </pre>
+                <h3>Sass Variable Scope</h3>
+                <p>
+                    Las variables Sass solo están disponibles en el nivel de anidamiento donde se definen.
+                    <br>
+                    Observe el siguiente ejemplo:
+                </p>
+                <pre>
+                    <code>
+                        $myColor: red;
+                        
+                        h1 {
+                            $myColor: green;
+                            color: $myColor;
+                        }
+                        
+                        p {
+                            color: $myColor;
+                        }
+                    </code>
+                </pre>
+                <p>¿El color del texto dentro de una etiqueta será rojo o verde? ¡Será rojo!
+                    La otra definición, $myColor: verde; está dentro de la regla, y sólo estará disponible allí!
+                    Por lo tanto, la salida CSS será:
+                </p>
+                <pre>
+                    <code>
+                        h1 {
+                            color: green;
+                        }
+                        
+                        p {
+                            color: red;
+                        }
+                    </code>
+                </pre>
+                <p>
+                    Las variables globales deben definirse fuera de cualquier regla. Al inicio del programa o en su
+                    propio
+                    archivo e incluirlo con la palabra clave @include
+                </p>
+            </div>
+        </section>
+        <section class="main-section" id="sass_reglas_anidadas">
+            <header>
+                <h1>Reglas anidadas Sass</h1>
+            </header>
+            <div class="content">
+                <p>
+                    Sass le permite anidar selectores CSS de la misma manera que HTML. Dado que puede anidar propiedades
+                    en
+                    Sass, es más limpio y fácil de leer que CSS estándar.
+                    <br>
+                    Vea un ejemplo de algún código Sass para la navegación de un sitio:
+                </p>
+
+                <pre>
+                    <code>
+                        nav {
+                            ul {
+                                margin: 0;
+                                padding: 0;
+                                list-style: none;
+                            }
+                            li {
+                                display: inline-block;
+                            }
+                            a {
+                                display: block;
+                                padding: 6px 12px;
+                                text-decoration: none;
+                            }
+                        } 
+                    </code>
+                </pre>
+                <p>Observe que en Sass, los selectores ul,li, y a están anidados dentro del selector nav</p>
+                <p>
+                    Mientras que en CSS, las reglas se definen una por una (no anidadas):
+                </p>
+                <pre>
+                    <code>
+                        nav ul {
+                            margin: 0;
+                            padding: 0;
+                            list-style: none;
+                        }
+                        nav li {
+                            display: inline-block;
+                        }
+                        nav a {
+                            display: block;
+                            padding: 6px 12px;
+                            text-decoration: none;
+                        }
+                    </code>
+                </pre>
+                <h3>Propiedades anidadas Sass</h3>
+                <p>
+                    Muchas propiedades CSS tienen el mismo prefijo, como font-family, font-size y font-weight o
+                    text-align,
+                    text-transform y text-overflow.
+                    <br>
+                    Con Sass puede escribirlos como propiedades anidadas:
+                </p>
+                <pre>
+                    <code>
+                        font: {
+                            family: Helvetica, sans-serif;
+                            size: 18px;
+                            weight: bold;
+                        }
+                        
+                        text: {
+                            align: center;
+                            transform: lowercase;
+                            overflow: hidden;
+                        }
+                    </code>
+                </pre>
+                <p>
+                    El transpilador Sass convertirá lo anterior a CSS normal:
+                </p>
+                <pre>
+                    <code>
+                        font-family: Helvetica, sans-serif;
+                        font-size: 18px;
+                        font-weight: bold;
+                        
+                        text-align: center;
+                        text-transform: lowercase;
+                        text-overflow: hidden;
+                    </code>
+                </pre>
+            </div>
+        </section>
+        <section class="main-section" id="extend_y_herencia">
+            <header>
+                <h1>Sass @extend y herencia</h1>
+            </header>
+            <div class="content">
+                <h3>Sass @extend y herencias</h3>
+                <p>
+                    La directiva @extend le permite compartir un conjunto de propiedades CSS de un selector a otro.
+                    <br>
+                    Es útil si tiene elementos con un estilo casi idéntico que sólo difieren en algunos detalles
+                    pequeños.
+                </p>
+                <p>
+                    En el siguiente ejemplo de Sass se crea primero un estilo básico para los botones (este estilo se
+                    usará para la mayoría de los botones). A continuación, creamos un estilo para un botón "Informe" y
+                    un estilo para un botón "Enviar". Los botones "Informar" y "Enviar" heredan todas las propiedades
+                    CSS de la clase .button-basic, a través de la directiva @extend. Además, tienen sus propios colores
+                    definidos:
+                </p>
+                <pre>
+                    <code>
+                        -button-basic{
+                            border: none;
+                            padding: 15px 30px;
+                            text-align: center;
+                            font-size: 16px;
+                            cursor: pointer;
+                        }
+                        
+                        .button-report {
+                            @extend .button-basic;
+                            background-color: red;
+                        }
+                        
+                        .button-submit {
+                            @extend .button-basic;
+                            background-color: green;
+                            color: white;
+                        }
+                    </code>
+                </pre>
+                <p>Después de la compilación, el CSS se verá así:</p>
+                <pre>
+                    <code>
+                        .button-basic, .button-report, .button-submit {
+                            border: none;
+                            padding: 15px 30px;
+                            text-align: center;
+                            font-size: 16px;
+                            cursor: pointer;
+                        }
+                        
+                        .button-report  {
+                            background-color: red;
+                        }
+                        
+                        .button-submit  {
+                            background-color: green;
+                            color: white;
+                        }
+                    </code>
+                </pre>
+                <p>
+                    Mediante el uso de la directiva @extend, no es necesario especificar varias clases para un elemento
+                    en el
+                    código HTML, como este: &lt;button class-"button-basic button-report"&gt;Informar de
+                    esto&lt;/button&gt;. Solo
+                    tiene que especificar .button-report para obtener ambos conjuntos de estilos.
+
+                    La directiva @extend ayuda a mantener su código Sass muy seco.
+                </p>
+            </div>
+        </section>
+        <!-- &lt;p&gt; -->
+    </main>
+    <footer>
+        <p>
+            Referencias <a href="https://www.w3schools.com/sass/default.asp">w3schools-Sass Tutorial</a>
+        </p>
+        <p>Credo por Diego López &copf;</p>
+    </footer>
+</body>
+
+</html>
