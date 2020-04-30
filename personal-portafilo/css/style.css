@@ -1,0 +1,172 @@
+@charset "UTF-8";
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body { font-family: 'Manrope', sans-serif, Arial, Helvetica; background-color: #3e4444; }
+
+#navbar { position: fixed; top: 0; padding: 1em 0; width: 100%; background-color: #405d27; }
+
+#navbar ul { list-style: none; text-align: center; }
+
+#navbar ul li { display: inline; }
+
+#navbar ul li a { text-decoration: none; font-size: 1.2em; color: white; margin: .7em; }
+
+main { margin-top: 3em; }
+
+.ajustar { height: 4em; }
+
+#welcome-section { width: 100%; height: 100vh; padding: 1em; color: white; text-align: center; background-color: #82b74b; }
+
+#welcome-section h1 { font-size: 2.5em; font-weight: bold; }
+
+#projects { width: 100%; padding: 0 1em; text-align: center; color: white; background-color: #86af49; }
+
+#projects h1 { margin-bottom: 1em; font-size: 2.5em; }
+
+#projects .projects-container { max-width: 1000px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin: 0 auto; }
+
+#projects .projects-container .project-tile { text-decoration: none; text-transform: uppercase; margin-bottom: 1em; max-width: 400px; }
+
+#projects .projects-container .project-tile .title { padding: .5em; font-size: 1.3em; color: white; border-radius: 10px; background-color: #3e4444; margin-bottom: -6px; }
+
+#projects .projects-container .project-tile img { width: 100%; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; -webkit-box-shadow: 3px 3px 6px black; box-shadow: 3px 3px 6px black; }
+
+#encuentrame { height: 90vh; text-align: center; color: white; background-color: #405d27; }
+
+#encuentrame h1 { font-size: 2.5em; margin-bottom: 1em; }
+
+#encuentrame .profile-link { text-decoration: none; color: white; font-size: 2em; }
+
+footer { padding: 1em; text-align: center; color: white; font-size: 1.3em; }
+
+@media all and (min-width: 800px) { #navbar { font-weight: bold; }
+  #projects { padding: 0 2em; }
+  #projects .projects-container { display: -ms-grid; display: grid; -ms-grid-columns: (minmax(320px, 1fr))[auto-fit]; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3em; -webkit-box-align: baseline; -ms-flex-align: baseline; align-items: baseline; }
+  #projects .projects-container img { -webkit-transition-duration: .6s; transition-duration: .6s; -webkit-transform: translateY(-45px); transform: translateY(-45px); border-radius: 5px; border-top-left-radius: 15px; border-top-right-radius: 15px; }
+  #projects .projects-container img:hover { border-top-left-radius: 3px; border-top-right-radius: 3px; -webkit-transform: translateY(0); transform: translateY(0); -webkit-box-shadow: 1px 0 10px 3px black; box-shadow: 1px 0 10px 3px black; } }
+
+/*Animation de escritutra*/
+#text-animation { margin-top: 1em; font-size: 2em; }
+
+#text-animation #texts { display: inline; margin-right: -5px; }
+
+#text-animation #texts::after { content: ''; -webkit-animation-delay: 2s; animation-delay: 2s; -webkit-animation-name: type; animation-name: type; -webkit-animation-duration: 30s; animation-duration: 30s; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; }
+
+#text-animation #pointer { display: inline-block; }
+
+#text-animation #pointer::after { content: ''; width: 2px; border-right: 5px solid white; -webkit-animation: animatePointer 450ms linear infinite alternate; animation: animatePointer 450ms linear infinite alternate; }
+
+@-webkit-keyframes type { 0% { content: "y"; }
+  2% { content: "yo"; }
+  4% { content: "y"; }
+  6% { content: "Y"; }
+  8% { content: "Yo"; }
+  10% { content: "Yo "; }
+  12% { content: "Yo c"; }
+  14% { content: "Yo cr"; }
+  16% { content: "Yo cre"; }
+  17% { content: "Yo creo"; }
+  18% { content: "Yo creo."; }
+  20% { content: "Yo cre"; }
+  22% { content: "Yo c"; }
+  24% { content: "Yo"; }
+  26% { content: ""; }
+  30% { content: ""; }
+  32% { content: "Y"; }
+  34% { content: "Yo"; }
+  36% { content: "Yo s"; }
+  38% { content: "Yo si"; }
+  39% { content: "Yo si"; }
+  40% { content: "Yo s"; }
+  41% { content: "Yo su"; }
+  42% { content: "Yo sue"; }
+  44% { content: "Yo sueñ"; }
+  46% { content: "Yo sueño"; }
+  48% { content: "Yo sueño."; }
+  50% { content: "Yo sueño."; }
+  52% { content: "Yo sueño"; }
+  54% { content: "Yo sue"; }
+  56% { content: "Yo s"; }
+  58% { content: ""; }
+  60% { content: ""; }
+  62% { content: "Y"; }
+  64% { content: "Yo"; }
+  66% { content: "Yo a"; }
+  68% { content: "Yo ay"; }
+  70% { content: "Yo ayy"; }
+  72% { content: "Yo ay"; }
+  74% { content: "Yo ayu"; }
+  76% { content: "Yo ayud"; }
+  78% { content: "Yo ayudo"; }
+  80% { content: "Yo ayudo."; }
+  82% { content: "Yo ayud"; }
+  84% { content: "Yo ay"; }
+  86% { content: "Yo"; }
+  90% { content: "Yo p"; }
+  91% { content: "Yo pr"; }
+  92% { content: "Yo pro"; }
+  94% { content: "Yo progr"; }
+  96% { content: "Yo programo."; }
+  98% { content: "Yo programo."; }
+  100% { content: "Yo programo."; } }
+
+@keyframes type { 0% { content: "y"; }
+  2% { content: "yo"; }
+  4% { content: "y"; }
+  6% { content: "Y"; }
+  8% { content: "Yo"; }
+  10% { content: "Yo "; }
+  12% { content: "Yo c"; }
+  14% { content: "Yo cr"; }
+  16% { content: "Yo cre"; }
+  17% { content: "Yo creo"; }
+  18% { content: "Yo creo."; }
+  20% { content: "Yo cre"; }
+  22% { content: "Yo c"; }
+  24% { content: "Yo"; }
+  26% { content: ""; }
+  30% { content: ""; }
+  32% { content: "Y"; }
+  34% { content: "Yo"; }
+  36% { content: "Yo s"; }
+  38% { content: "Yo si"; }
+  39% { content: "Yo si"; }
+  40% { content: "Yo s"; }
+  41% { content: "Yo su"; }
+  42% { content: "Yo sue"; }
+  44% { content: "Yo sueñ"; }
+  46% { content: "Yo sueño"; }
+  48% { content: "Yo sueño."; }
+  50% { content: "Yo sueño."; }
+  52% { content: "Yo sueño"; }
+  54% { content: "Yo sue"; }
+  56% { content: "Yo s"; }
+  58% { content: ""; }
+  60% { content: ""; }
+  62% { content: "Y"; }
+  64% { content: "Yo"; }
+  66% { content: "Yo a"; }
+  68% { content: "Yo ay"; }
+  70% { content: "Yo ayy"; }
+  72% { content: "Yo ay"; }
+  74% { content: "Yo ayu"; }
+  76% { content: "Yo ayud"; }
+  78% { content: "Yo ayudo"; }
+  80% { content: "Yo ayudo."; }
+  82% { content: "Yo ayud"; }
+  84% { content: "Yo ay"; }
+  86% { content: "Yo"; }
+  90% { content: "Yo p"; }
+  91% { content: "Yo pr"; }
+  92% { content: "Yo pro"; }
+  94% { content: "Yo progr"; }
+  96% { content: "Yo programo."; }
+  98% { content: "Yo programo."; }
+  100% { content: "Yo programo."; } }
+
+@-webkit-keyframes animatePointer { from { opacity: 1; }
+  to { opacity: 0; } }
+
+@keyframes animatePointer { from { opacity: 1; }
+  to { opacity: 0; } }
+/*# sourceMappingURL=style.css.map */
