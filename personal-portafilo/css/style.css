@@ -1,6 +1,8 @@
 @charset "UTF-8";
 * { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+html { scroll-behavior: smooth; }
+
 body { font-family: 'Manrope', sans-serif, Arial, Helvetica; background-color: #3e4444; }
 
 #navbar { position: fixed; top: 0; padding: 1em 0; width: 100%; background-color: #405d27; }
